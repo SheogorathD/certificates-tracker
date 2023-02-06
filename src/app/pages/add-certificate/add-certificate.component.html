@@ -1,16 +1,21 @@
-<form class="mt-3 mx-5">
+<form class="mt-3 mx-5" [formGroup]="certificatesGroup" (ngSubmit)="onSubmit()">
   <div class="formgrid grid">
     <div class="field col-12">
       <div class="p-inputgroup">
         <span class="p-inputgroup-addon"><i class="pi pi-id-card"></i></span>
-        <input type="text" pInputText placeholder="Ship Name" />
+        <input
+          type="text"
+          pInputText
+          placeholder="Ship Name"
+          formControlName="shipName"
+        />
       </div>
     </div>
 
     <div class="field col-12">
       <div class="p-inputgroup">
         <span class="p-inputgroup-addon"><i class="pi pi-clock"></i></span>
-        <input type="date" pInputText />
+        <input type="date" pInputText formControlName="classStatutory" />
         <span class="p-inputgroup-addon">Class&Statutory</span>
       </div>
     </div>
@@ -18,7 +23,7 @@
     <div class="field col-12 md:col-6">
       <div class="p-inputgroup">
         <span class="p-inputgroup-addon"><i class="pi pi-clock"></i></span>
-        <input type="date" pInputText />
+        <input type="date" pInputText formControlName="iopp" />
         <span class="p-inputgroup-addon">IOPP</span>
       </div>
     </div>
@@ -26,7 +31,7 @@
     <div class="field col-12 md:col-6">
       <div class="p-inputgroup">
         <span class="p-inputgroup-addon"><i class="pi pi-clock"></i></span>
-        <input type="date" pInputText />
+        <input type="date" pInputText formControlName="bwm" />
         <span class="p-inputgroup-addon">BWM</span>
       </div>
     </div>
@@ -34,7 +39,7 @@
     <div class="field col-12 md:col-6">
       <div class="p-inputgroup">
         <span class="p-inputgroup-addon"><i class="pi pi-clock"></i></span>
-        <input type="date" pInputText />
+        <input type="date" pInputText formControlName="dd" />
         <span class="p-inputgroup-addon">DD</span>
       </div>
     </div>
@@ -42,7 +47,7 @@
     <div class="field col-12 md:col-6">
       <div class="p-inputgroup">
         <span class="p-inputgroup-addon"><i class="pi pi-clock"></i></span>
-        <input type="date" pInputText />
+        <input type="date" pInputText formControlName="ism" />
         <span class="p-inputgroup-addon">ISM</span>
       </div>
     </div>
@@ -50,7 +55,7 @@
     <div class="field col-12 md:col-6">
       <div class="p-inputgroup">
         <span class="p-inputgroup-addon"><i class="pi pi-clock"></i></span>
-        <input type="date" pInputText />
+        <input type="date" pInputText formControlName="isps" />
         <span class="p-inputgroup-addon">ISPS</span>
       </div>
     </div>
@@ -58,7 +63,7 @@
     <div class="field col-12 md:col-6">
       <div class="p-inputgroup">
         <span class="p-inputgroup-addon"><i class="pi pi-clock"></i></span>
-        <input type="date" pInputText />
+        <input type="date" pInputText formControlName="mlc" />
         <span class="p-inputgroup-addon">MLC</span>
       </div>
     </div>
@@ -66,7 +71,7 @@
     <div class="field col-12 md:col-6">
       <div class="p-inputgroup">
         <span class="p-inputgroup-addon"><i class="pi pi-clock"></i></span>
-        <input type="date" pInputText />
+        <input type="date" pInputText formControlName="doc" />
         <span class="p-inputgroup-addon">DOC</span>
       </div>
     </div>
@@ -74,9 +79,19 @@
     <div class="field col-12 md:col-6">
       <div class="p-inputgroup">
         <span class="p-inputgroup-addon"><i class="pi pi-clock"></i></span>
-        <input type="date" pInputText />
+        <input type="date" pInputText formControlName="ihm" />
         <span class="p-inputgroup-addon">IHM</span>
       </div>
     </div>
+
+    <button
+      pButton
+      type="submit"
+      icon="pi pi-check"
+      label="Submit"
+      iconPos="left"
+      class="m-auto"
+      [disabled]="!certificatesGroup.valid"
+    ></button>
   </div>
 </form>
