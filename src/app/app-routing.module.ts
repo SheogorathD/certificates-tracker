@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'certificates',
     loadChildren: () =>
       import('./pages/certificates-list/certificates-list.module').then(
         (m) => m.CertificatesListModule
