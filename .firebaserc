@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "shipscertificatestracker": {
+      "hosting": {
+        "certificates-tracker": [
+          "shipscertificatestracker"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "shipscertificatestracker"
+  }
+}
